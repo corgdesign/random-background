@@ -1,13 +1,17 @@
 function randomBackground(element) {
-		
+	
+	// Set up the variables	
 	var rgb1, rgb2, rgb3;
-		
-	rgb1 = Math.floor( (Math.random() * 255) );
-	rgb2 = Math.floor( (Math.random() * 255) );
-	rgb3 = Math.floor( (Math.random() * 255) );
-		
+	
+	// Generate random numbers between 0 + 255 (Math.floor rounds down)
+	rgb1 = Math.floor( (Math.random() * 256) );
+	rgb2 = Math.floor( (Math.random() * 256) );
+	rgb3 = Math.floor( (Math.random() * 256) );
+	
+	// Build rgba CSS style
 	var rgba = "rgba(" + rgb1 + "," + rgb2 + "," + rgb3 + ", 0.2)";
-		
+	
+	// Apply style to element(s)
 	$(element).css('background-color', rgba);
 	
 };

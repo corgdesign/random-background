@@ -1,6 +1,6 @@
 $(function(){
 
-	function randomBackground(element) {
+	$.fn.randomBackground = function (alpha) {
 		
 		// Set up the variables	
 		var rgb1, rgb2, rgb3;
@@ -11,10 +11,10 @@ $(function(){
 		rgb3 = Math.floor( (Math.random() * 256) );
 		
 		// Build rgba CSS style
-		var rgba = "rgba(" + rgb1 + "," + rgb2 + "," + rgb3 + ", 0.2)";
+		var rgba = "rgba(" + rgb1 + "," + rgb2 + "," + rgb3 + "," + alpha + ")";
 		
 		// Apply style to element(s)
-		$(element).css('background-color', rgba);
+		$(this).css('background-color', rgba);
 		
 	};
 

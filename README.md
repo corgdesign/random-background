@@ -1,6 +1,6 @@
 # randomBackground.jquery.js
-jQuery function to add a random RGBA background to an element.
+jQuery function to add a random rgba background to an element.
 
 Call function on element like so:
 
-randomBackground('div');
+$('div').randomBackground(0.3); // 0.3 is alpha value of rgba

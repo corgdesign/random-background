@@ -1,4 +1,4 @@
-$(function(){
+(function( $ ) {
 
 	$.fn.randomBackground = function (alpha) {
 		
@@ -18,4 +18,4 @@ $(function(){
 		
 	};
 
-)};
+}( jQuery ));

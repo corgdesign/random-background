@@ -2,16 +2,16 @@
 
 	$.fn.randomBackground = function (alpha) {
 		
-		// Set up the variables	
-		var rgb1, rgb2, rgb3;
+		// Set up array to hold values
+		var rgb = [ ];
 		
-		// Generate random numbers between 0 + 255 (Math.floor rounds down)
-		rgb1 = Math.floor( (Math.random() * 256) );
-		rgb2 = Math.floor( (Math.random() * 256) );
-		rgb3 = Math.floor( (Math.random() * 256) );
+		// Generate random numbers between 0 + 255 (Use 256 as Math.floor rounds down)
+		for( i=0; i < 3; i++ ) {
+			rgb[i] = Math.floor( (Math.random() * 256) );
+		};
 		
 		// Build rgba CSS style
-		var rgba = "rgba(" + rgb1 + "," + rgb2 + "," + rgb3 + "," + alpha + ")";
+		var rgba = "rgba(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + "," + alpha + ")";
 		
 		// Apply style to element(s)
 		$(this).css('background-color', rgba);
